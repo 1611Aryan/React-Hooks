@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const PREFIX = "Messenger-user-";
+const PREFIX = "Messenger-";
 
 const useLocalStorage = <T extends unknown>(key: string, initialValue: T) => {
   const PREFIXED_KEY = PREFIX + key;
