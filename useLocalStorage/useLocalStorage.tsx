@@ -1,8 +1,11 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const PREFIX = "Messenger-";
 
-const useLocalStorage = <T extends unknown>(key: string, initialValue: T) => {
+const useLocalStorage = <T,>(
+  key: string,
+  initialValue: T
+): [T, React.Dispatch<React.SetStateAction<T>>] => {
   const PREFIXED_KEY = PREFIX + key;
 
   const [value, setValue] = useState<T>(() => {
